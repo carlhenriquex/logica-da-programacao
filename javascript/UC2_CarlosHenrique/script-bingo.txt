@@ -1,0 +1,24 @@
+1 Input para receber a opção do menu
+
+2 Retornar o que o usuario escolheu
+
+3
+    SE opção 1, criar participante
+        receba o valor do nome do participante E armazene numa lista
+        retorne ao menu
+
+    SE opção 2, sortear valor
+        Sorteio
+        Exibir valor sorteado
+        Armazenar valor sorteado numa lista
+
+    SE opção 3, conferir numeros do ganhador
+        Receber números marcados
+        Conferir se números marcados estão na lista de valores sorteados E cartela completa
+        SE todos os números foram chamados, exiba ganhador E encerre o loop
+        SENAO retorne ao menu E continue
+
+    Se opção 4, retornar todos os número ao globo
+        encerre o loop
+
+4 Encerrar o programa
