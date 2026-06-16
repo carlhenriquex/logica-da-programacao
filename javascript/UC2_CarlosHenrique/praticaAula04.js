@@ -5,13 +5,15 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question("\nSeu nome: ", function(resposta1){
-    rl.question("Seu sobrenome: ", function(resposta2){
-        
-        console.log("Resposta: ", resposta1, resposta2);
-        rl.close();
-    });
-});
 
+const TOTAL_NUMER0S = 75;
+let numerosDisponiveis = [];
+let numerosSorteados = [];
+
+
+if (numerosDisponiveis.length === 0) {
+    console.log("\nTodos os números ja foram chamados");
+    return;
+}
 
 // =====================================
