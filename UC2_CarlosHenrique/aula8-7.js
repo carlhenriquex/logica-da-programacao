@@ -7,13 +7,15 @@ const rl = readline.createInterface({
 
 rl.question("\nInforme a hora atual: ", function(resposta) {
     
-    if(resposta >= 0 && resposta <= 5){
+    let hora = Number(resposta);
+
+    if(hora >= 0 && hora <= 5){
         console.log("Madrugada!");
-    } else if(resposta <= 11) {
+    } else if(hora <= 11) {
         console.log("Boa dia!");
-    } else if(resposta <= 17) {
+    } else if(hora <= 17) {
         console.log("Boa tarde!");
-    } else if(resposta <= 23) {
+    } else if(hora <= 23) {
         console.log("Boa noite!");
     } else {
         console.log("Hora inválida.");

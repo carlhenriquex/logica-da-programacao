@@ -8,31 +8,31 @@ const rl = readline.createInterface({
 rl.question("\nQual o seu peso: ", function(peso) {
     rl.question("\nQual o sua altura: ", function(altura) {
 
-        let peso = Float(peso);
-        let altura = Float(altura);
+        peso = parseFloat(peso);
+        altura = parseFloat(altura);
 
-        imc = peso / (altura * altura);
+        let imc = peso / (altura * altura);
 
-        if(imc < 18.5){
+        if(imc > 0 && imc < 18.5){
             console.log("Baixo peso!");
 
-        } else if (18.5 >= imc <= 24.9) {
-            console.log("Acesso negado.");
+        } else if (imc >= 18.5 && imc <= 24.9) {
+            console.log("Peso adequado!");
 
-        } else if (25 >= imc <= 29.9) {
-            console.log("Acesso negado.");
+        } else if (imc >= 25 && imc <= 29.9) {
+            console.log("Sobrepeso.");
 
-        } else if (30 >= imc <= 34.9) {
-            console.log("Acesso negado.");
+        } else if (imc >= 30 && imc <= 34.9) {
+            console.log("Obesidade grau I.");
 
-        } else if (35 >= imc <= 39.9) {
-            console.log("Acesso negado.");
+        } else if (imc >= 35 && imc <= 39.9) {
+            console.log("Obesidade grau II.");
 
         } else if (imc > 40) {
-            console.log("Acesso negado.");
+            console.log("Obesidade grau III.");
 
         } else {
-            console.log("Valor digitado inválido.");
+            console.log("Valores digitados inválidos.");
         };
         rl.close();
     });
